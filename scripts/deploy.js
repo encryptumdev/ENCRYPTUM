@@ -1,13 +1,14 @@
+const hre = require("hardhat");
+
 async function main() {
-  const Encryptum = await ethers.getContractFactory("EncryptumStorage");
-  const encryptum = await Encryptum.deploy();
-  await encryptum.deployed();
-  console.log("Encryptum deployed to:", encryptum.address);
+  const EncryptumStorage = await hre.ethers.getContractFactory("EncryptumStorage");
+  const contract = await EncryptumStorage.deploy();
+  await contract.deployed();
+
+  console.log(`EncryptumStorage deployed to: ${contract.address}`);
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
