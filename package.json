@@ -1,0 +1,13 @@
+{
+  "name": "encryptum",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd client && npm start",
+    "deploy": "npx hardhat run scripts/deploy.js --network mumbai"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.0"
+  }
+}
