@@ -3,25 +3,23 @@ pragma solidity ^0.8.17;
 
 contract EncryptumStorage {
     struct File {
-        address owner;
-        string encryptedCID;
+        string cid;
         string fileName;
         uint256 timestamp;
+        address owner;
     }
 
-    mapping(uint256 => File) private files;
-    uint256 public fileCount;
+    mapping(address => File[]) public files;
 
-    event FileUploaded(uint256 fileId, address indexed owner, string encryptedCID, string fileName);
+    event FileUploaded(address indexed user, string cid, string fileName, uint256 timestamp);
 
-    function uploadFile(string memory _encryptedCID, string memory _fileName) external {
-        fileCount++;
-        files[fileCount] = File(msg.sender, _encryptedCID, _fileName, block.timestamp);
-        emit FileUploaded(fileCount, msg.sender, _encryptedCID, _fileName);
+    function uploadFile(string memory _cid, string memory _fileName) public {
+        File memory newFile = File(_cid, _fileName, block.timestamp, msg.sender);
+        files[msg.sender].push(newFile);
+        emit FileUploaded(msg.sender, _cid, _fileName, block.timestamp);
     }
 
-    function getFile(uint256 _fileId) external view returns (File memory) {
-        require(_fileId > 0 && _fileId <= fileCount, "File does not exist");
-        return files[_fileId];
+    function getMyFiles() public view returns (File[] memory) {
+        return files[msg.sender];
     }
 }
