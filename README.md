@@ -22,7 +22,6 @@ Try the Encryptum Agent Dashboard live:
 
 - Website: [encryptum.io](https://encryptum.io)  
 - GitHub: [github.com/encryptumdev](https://github.com/encryptumdev)  
-- Protocol: [modelcontext.org](https://modelcontext.org)  
 - X : [@encryptumio](https://x.com/encryptumio)
 
 ---
