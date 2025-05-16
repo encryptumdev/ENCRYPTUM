@@ -1,0 +1,12 @@
+{
+  "name": "encryptum",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.14.0"
+  }
+}
