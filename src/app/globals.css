@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #090a0c;
+  --c-primary: #028be1;
+  --tx-gray: #5c5f62;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-g-primary text-white;
+}
+
+.bg-line {
+  --line: color-mix(in lch, canvasText 25%, #484848);
+  --size: 60px;
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      0 -5vmin / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 0 -5vmin / var(
+        --size
+      ) var(--size);
+  mix-blend-mode: color-dodge;
+  top: 0;
+  /* z-index: -1; */
+}
+
+.svg-wrapper svg {
+  width: 100%;
+}
+
+.svg-blue svg path {
+  fill: #62f8fe;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 17px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  animation: l22-0 2s infinite linear;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 15%;
+  border-radius: 50%;
+  background: inherit;
+  transform: rotate(0deg) translate(150%);
+  animation: l22 1s infinite;
+}
+.loader:after {
+  animation-delay: -0.5s;
+}
+@keyframes l22-0 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes l22 {
+  100% {
+    transform: rotate(1turn) translate(150%);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-2 {
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 0.5s infinite linear;
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.bg-page {
+  background-image: url("/images/bg.png");
+  background-position: top center;
+  opacity: 8%;
+}

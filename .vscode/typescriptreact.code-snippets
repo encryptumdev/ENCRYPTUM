@@ -1,0 +1,23 @@
+{
+	"React TypeScript Component": {
+		"prefix": "rtc",
+		"body": [
+			"import React, { FC } from 'react';",
+			"",
+			"interface ${1:ComponentName}Props {",
+			"}",
+			"",
+			"const ${1:ComponentName}: FC<${1:ComponentName}Props> = () => {",
+			"  return (",
+			"    <div>",
+			"      {/* Add your JSX code here */}",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"export default ${1:ComponentName};"
+		],
+		"description": "React TypeScript Component"
+	}
+	
+}
