@@ -20,19 +20,6 @@ const Header: FC<HeaderProps> = () => {
       <ConnectKitButton.Custom>
         {({ isConnected, show, address, isConnecting }) => {
           return (
-            // <Button
-            //   onClick={show ? () => show() : undefined}
-            //   className={className}
-            //   classAdd={"py-2.5 px-6"}
-            //   text={
-            //     !address
-            //       ? longText
-            //         ? "Connect Wallet"
-            //         : "Connect"
-            //       : `${address?.slice(0, 5)} ... ${address?.slice(-5)}`
-            //   }
-            // />
-
             <div
               className="w-[36px] svg-wrapper cursor-pointer"
               onClick={
