@@ -1,5 +1,5 @@
 import PlusAdd from "@/assets/icons/add-image";
-import { useFileContext } from "@/utilities/file_context/file.context";
+import { useFileContext } from "@/libs/file/file.context";
 import { ConnectKitButton } from "connectkit";
 import dynamic from "next/dynamic";
 import { FC } from "react";

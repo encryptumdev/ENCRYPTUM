@@ -1,7 +1,7 @@
 "use client";
 
 import ArrowLeft from "@/assets/icons/arrow-left";
-import { useFileContext } from "@/utilities/file_context/file.context";
+import { useFileContext } from "@/libs/file/file.context";
 import { useParams } from "next/navigation";
 import { FC, useEffect } from "react";
 

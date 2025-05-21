@@ -4,7 +4,7 @@ import AttachmentIcon from "@/assets/icons/attachment-icon";
 import BankIcon from "@/assets/icons/bank-icon";
 import MedicalIcon from "@/assets/icons/medical-icon";
 import Loader from "@/components/loader";
-import { useFileContext } from "@/utilities/file_context/file.context";
+import { useFileContext } from "@/libs/file/file.context";
 import ConnectOptional from "@/widgets/connect_optional";
 import Header from "@/widgets/header";
 import ModalDetail from "@/widgets/modal_detail";

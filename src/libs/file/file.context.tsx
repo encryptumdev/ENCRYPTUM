@@ -1,12 +1,9 @@
 "use client";
 
+import { ABI } from "@/libs/file/abi";
+import { fetchQueryFiles, postFiles } from "@/libs/file/file.fetcher";
+import { config } from "@/libs/web3/web3.provider";
 import { MissingAppProviderError } from "@/utilities/errors";
-import { ABI } from "@/utilities/file_context/abi";
-import {
-  fetchQueryFiles,
-  postFiles,
-} from "@/utilities/file_context/file.fetcher";
-import { config } from "@/utilities/web3/web3.provider";
 import ModalUpload from "@/widgets/modal_upload";
 import { useMutation } from "@tanstack/react-query";
 import { readContract, writeContract } from "@wagmi/core";
@@ -368,11 +365,7 @@ const FileProvider = ({ children }: FileProviderProps) => {
     index: number
   ) => {
     try {
-      console.log("queryFiles", arrNumber, dataFinal, index);
-
       const result = await fetchQueryFiles(dataFinal);
-
-      console.log("queryFiles", result);
 
       if (
         result.file &&

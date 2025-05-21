@@ -1,6 +1,6 @@
 import React from "react";
 
-import Web3ContextProvider from "@/utilities/web3/web3.context";
+import Web3ContextProvider from "@/libs/web3/web3.context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import dynamic from "next/dynamic";

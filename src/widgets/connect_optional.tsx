@@ -6,9 +6,14 @@ interface ConnectOptionalProps {
   className?: string;
   longText?: string;
   onClick?: () => void;
+  text?: string;
 }
 
-const ConnectOptional: FC<ConnectOptionalProps> = ({ className, onClick }) => {
+const ConnectOptional: FC<ConnectOptionalProps> = ({
+  className,
+  onClick,
+  text,
+}) => {
   return (
     <ConnectKitButton.Custom>
       {({ isConnected, show, address, isConnecting }) => {
@@ -16,7 +21,7 @@ const ConnectOptional: FC<ConnectOptionalProps> = ({ className, onClick }) => {
           <Button
             onClick={address ? onClick : show ? () => show() : undefined}
             className={className}
-            text={"upload"}
+            text={text ?? "Upload"}
           />
         );
       }}

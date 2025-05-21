@@ -16,9 +16,13 @@
     "classnames": "^2.5.1",
     "connectkit": "^1.7.3",
     "copy-to-clipboard": "^3.3.3",
+    "crypto-js": "^4.2.0",
     "ethers": "^6.12.1",
+    "got": "^14.4.7",
     "ipfs-http-client": "^60.0.1",
+    "js-sha256": "^0.11.0",
     "js-sha3": "^0.9.3",
+    "moment": "^2.30.1",
     "mongoose": "^8.4.0",
     "next": "14.2.3",
     "react": "^18",
@@ -30,6 +34,7 @@
     "wagmi": "^2.8.8"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
